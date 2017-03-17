@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import hi.is.Connect.*;
+import java.sql.*;
 
 /**
  * Created by Alexander on 16.3.2017.
@@ -12,15 +13,19 @@ public class Search {
 
 
     private JPanel panel1;
-    private JFormattedTextField formattedTextField1;
+    private JFormattedTextField departure;
     private JButton leitaButton;
-    Connection connect = new Connection();
+    private JFormattedTextField aravial;
+    private JComboBox day;
+    Connect connect = new Connect();
 
     public Search() {
         leitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                connect.connection();
+                String departureText = departure.getText();
+                String aravialText = aravial.getText();
+                Connection con =  connect.connection();
             }
         });
     }
@@ -32,4 +37,5 @@ public class Search {
         search.pack();
         search.setVisible(true);
     }
+
 }

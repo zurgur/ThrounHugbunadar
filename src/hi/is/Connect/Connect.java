@@ -1,14 +1,11 @@
 package hi.is.Connect;
 
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * Created by Alexander on 16.3.2017.
  */
-public class Connection {
+public class Connect {
     public static java.sql.Connection connection(){
         try{
             Class.forName("org.sqlite.JDBC");
