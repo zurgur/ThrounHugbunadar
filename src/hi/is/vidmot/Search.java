@@ -30,13 +30,17 @@ public class Search {
                     Connection con =  connect.connection();
                     Statement statement = con.createStatement();
                     String s = "SELECT *" +
-                            "FROM Flights";
+                            "FROM Flights"; //+
+
                     statement.execute(s);
                     ResultSet rs = statement.getResultSet();
                     while( rs.next() ) {
-                        String name = rs.getString("Arrival");
-                        System.out.println(name);
+                        String name = rs.getString("from");
+                        if ( name.equals(departureText) ) {
+                            System.out.println(name);
+                        }
                     }
+                    System.out.println(departureText);
                     statement.close();
                     con.close();
                 } catch (SQLException e1) {
