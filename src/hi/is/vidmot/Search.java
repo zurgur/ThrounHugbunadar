@@ -23,9 +23,25 @@ public class Search {
         leitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String departureText = departure.getText();
-                String aravialText = aravial.getText();
-                Connection con =  connect.connection();
+                try {
+
+                    String departureText = departure.getText();
+                    String aravialText = aravial.getText();
+                    Connection con =  connect.connection();
+                    Statement statement = con.createStatement();
+                    String s = "SELECT *" +
+                            "FROM Flights";
+                    statement.execute(s);
+                    ResultSet rs = statement.getResultSet();
+                    while( rs.next() ) {
+                        String name = rs.getString("Arrival");
+                        System.out.println(name);
+                    }
+                    statement.close();
+                    con.close();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }
