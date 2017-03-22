@@ -12,7 +12,6 @@ public class Connect {
             java.sql.Connection con = DriverManager.getConnection("jdbc:sqlite:flight.sqlite");
             Statement stmt =  con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Flights");
-            System.out.print("connected");
             return con;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
