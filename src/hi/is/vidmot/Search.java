@@ -50,7 +50,7 @@ public class Search {
         });
     }
 
-    public void lunch() {
+    public void launch() {
         JFrame search = new JFrame("Search");
         search.setContentPane(new Search().panel1);
         search.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

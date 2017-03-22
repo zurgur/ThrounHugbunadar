@@ -20,14 +20,14 @@ public class Choose {
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                search.lunch();
+                search.launch();
                 close();
             }
         });
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                login.lunch();
+                login.launch();
                 close();
             }
         });
