@@ -20,7 +20,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Arival"/>
+          <text value="Arrival"/>
         </properties>
       </component>
       <component id="78006" class="javax.swing.JFormattedTextField" binding="departure">

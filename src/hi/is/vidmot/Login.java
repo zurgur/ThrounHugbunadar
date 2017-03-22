@@ -12,7 +12,7 @@ public class Login {
     private JFormattedTextField formattedTextField2;
     private JPanel panel1;
 
-    public void lunch() {
+    public void launch() {
         JFrame search = new JFrame("Search");
         search.setContentPane(new Login().panel1);
         search.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
