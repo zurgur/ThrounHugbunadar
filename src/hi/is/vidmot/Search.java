@@ -59,7 +59,12 @@ public class Search {
             }
         });
     }
+    //fall til þess að leita af flugum
+    //tekkur inn strengi
+    //@return strendur:
+    public void searchForFlight(String departure, String arrival){
 
+    }
     public void launch() {
         JFrame search = new JFrame("Search");
         search.setContentPane(new Search().panel1);
