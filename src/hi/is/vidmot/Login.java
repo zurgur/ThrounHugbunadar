@@ -12,6 +12,7 @@ public class Login {
     private JFormattedTextField formattedTextField2;
     private JPanel panel1;
 
+
     public void launch() {
         JFrame search = new JFrame("Search");
         search.setContentPane(new Login().panel1);
