@@ -14,7 +14,7 @@ public class MockSearch {
     public String searchForFlight(String departure, String arrival){
         for(int i = 0; i<fra.length;i++){
             for(int j = 0; j<til.length;j++){
-                if(fra[i].equals(departure) && til[j].equals(arrival))
+                if(fra[i].equals(departure) && til[j].equals(arrival));
             }
         }
         return null;
