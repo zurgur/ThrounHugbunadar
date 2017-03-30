@@ -11,7 +11,7 @@ public class SearchTest {
     @Test
     public void searchForFlight() throws Exception {
         Search search = new Search();
-        assertEquals("london keflavík", search.searchForFlight("london", "keflavík"));
+        assertEquals("london alicante", search.searchForFlight("london", "alicante"));
     }
 
 

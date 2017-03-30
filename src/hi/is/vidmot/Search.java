@@ -52,7 +52,7 @@ public class Search {
                 String to = rs.getString("to");
                 //athugar hvort hvort göggninn passa
                 if ( name.equals(departure) && to.equals(arrival) ) {
-                    return name + arrival;
+                    return name +" " + arrival;
                 }
             }
             // lokar gagnagruninnum svo hann geti verið nottaður afftur
