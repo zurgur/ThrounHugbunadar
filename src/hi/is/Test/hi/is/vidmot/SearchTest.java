@@ -14,5 +14,9 @@ public class SearchTest {
         assertEquals("london alicante", search.searchForFlight("london", "alicante"));
     }
 
-
+    @Test
+    public void testNullCase() throws Exception {
+        Search search = new Search();
+        assertNull(search.searchForFlight("asdf","adf"));
+    }
 }
