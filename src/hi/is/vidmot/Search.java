@@ -25,7 +25,7 @@ public class Search {
         leitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                searchForFlight(departure.getText(), aravial.getText());
+                String s = searchForFlight(departure.getText(), aravial.getText());
             }
         });
     }
