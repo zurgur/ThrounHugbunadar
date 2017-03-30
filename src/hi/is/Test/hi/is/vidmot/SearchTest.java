@@ -9,22 +9,23 @@ import static org.junit.Assert.*;
  * Created by Alexander on 3/30/2017.
  */
 public class SearchTest {
+    MockSearch search = new MockSearch();
     @Before
     public void before(){
-        Search search = new Search();
-
+        String [] fra = {"london", "alicante"};
+        String [] til = {"alicante", "london"};
+        search.setFra(fra);
+        search.setTil(til);
     }
 
 
     @Test
     public void searchForFlight() throws Exception {
-        Search search = new Search();
         assertEquals("london alicante", search.searchForFlight("london", "alicante"));
     }
 
     @Test
     public void testNullCase() throws Exception {
-        Search search = new Search();
         assertNull(search.searchForFlight("asdf","adf"));
     }
 }
