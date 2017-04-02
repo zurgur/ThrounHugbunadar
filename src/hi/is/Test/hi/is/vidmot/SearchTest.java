@@ -22,14 +22,21 @@ public class SearchTest {
     //test fyrir Search
     @Test
     public void searchForFlight() throws Exception {
-        // athugar hvort það fynni flug milli london og alicante
+        // athugar hvort það finni flug milli london og alicante
         assertEquals("london alicante", search.searchForFlight("london", "alicante"));
     }
 
     //test fyrir Search
     @Test
     public void testNullCase() throws Exception {
-        //testar hvað gerist ef það fynnur ekkert
+        //testar hvað gerist ef það finnur ekkert
         assertNull(search.searchForFlight("asdf","adf"));
+    }
+
+    @After
+    public void tearDown()
+    {
+        search.setFra(null);
+        search.setTil(null);
     }
 }

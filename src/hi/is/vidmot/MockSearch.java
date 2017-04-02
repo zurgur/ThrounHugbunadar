@@ -9,9 +9,9 @@ import java.sql.Statement;
  * Created by Alexander on 3/30/2017.
  */
 public class MockSearch {
-    // arry fyrir hvert flugipð fer
+    // array fyrir hvert flugipð fer
     String [] til;
-    // arry fyrir hvaðan flugið kemur
+    // array fyrir hvaðan flugið kemur
     String [] fra;
 
     //letar að flugi
