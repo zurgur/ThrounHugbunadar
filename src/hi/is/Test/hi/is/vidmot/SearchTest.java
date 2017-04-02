@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 public class SearchTest {
     MockSearch search = new MockSearch();
     @Before
+    //setur upp mock SearchTest
     public void before(){
         String [] fra = {"london", "alicante"};
         String [] til = {"alicante", "london"};
@@ -18,14 +19,17 @@ public class SearchTest {
         search.setTil(til);
     }
 
-
+    //test fyrir Search
     @Test
     public void searchForFlight() throws Exception {
+        // athugar hvort það fynni flug milli london og alicante
         assertEquals("london alicante", search.searchForFlight("london", "alicante"));
     }
 
+    //test fyrir Search
     @Test
     public void testNullCase() throws Exception {
+        //testar hvað gerist ef það fynnur ekkert
         assertNull(search.searchForFlight("asdf","adf"));
     }
 }
