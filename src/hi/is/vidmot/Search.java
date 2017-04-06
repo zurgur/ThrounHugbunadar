@@ -21,14 +21,15 @@ public class Search {
     private JComboBox day;
     Connect connect = new Connect();
     ArrayList<String> fra = connect.getFrom();
-    ArrayList<String> til = connect.getFrom();
+    ArrayList<String> til = connect.getTo();
     //
     public Search() {
         //atburðar handler fyrir leita takkann
         leitaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList s = searchForFlight(departure.getText(), aravial.getText());
+                ArrayList<String> s = searchForFlight(departure.getText(),aravial.getText());
+                System.out.print(s);
             }
         });
     }
@@ -40,7 +41,9 @@ public class Search {
         // fer í gegn um arry-ana
         ArrayList<String> fraTil = new ArrayList<>();
         for(int i = 0; i<fra.size();i++){
-            if(fra.get(i) == departure && til.get(i) == arrival){
+            String s = fra.get(i);
+            String t = til.get(i);
+            if(s.equalsIgnoreCase(departure)&& t.equalsIgnoreCase(arrival)){
                 fraTil.add(departure +" "+ arrival);
             }
 

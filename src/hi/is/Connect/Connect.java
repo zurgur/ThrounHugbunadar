@@ -6,13 +6,16 @@ import java.util.ArrayList;
 /**
  * Created by Alexander on 16.3.2017.
  */
+//fuking magic
 public class Connect {
     public static java.sql.Connection connection(){
         try{
+            //finn gagnagrunninn
             Class.forName("org.sqlite.JDBC");
             java.sql.Connection con = DriverManager.getConnection("jdbc:sqlite:flight.sqlite");
             Statement stmt =  con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Flights");
+            //skilar tengingu
             return con;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -30,7 +33,7 @@ public class Connect {
             //tengist SQLite gagnagrunninum
             //gerir statement sem tekkur allt úr töfnunni
             Statement statement = con.createStatement();
-            String s = "SELECT from" +
+            String s = "SELECT * " +
                     "FROM Flights"; //+
 
             //executar og finnur allt í töfnunni
@@ -52,14 +55,14 @@ public class Connect {
     }
     //skilar arry lista með to
     public ArrayList<String> getTo() {
-        ArrayList<String> from = new ArrayList<>();
+        ArrayList<String> to = new ArrayList<>();
 
         try {
             java.sql.Connection con = connection();
             //tengist SQLite gagnagrunninum
             //gerir statement sem tekkur allt úr töfnunni
             Statement statement = con.createStatement();
-            String s = "SELECT from" +
+            String s = "SELECT * " +
                     "FROM Flights"; //+
 
             //executar og finnur allt í töfnunni
@@ -69,7 +72,7 @@ public class Connect {
             //while sem fer í geggn um result göggnin
             while( rs.next() ) {
                 String name = rs.getString("to");
-                from.add(name);
+                to.add(name);
             }
             // lokar gagnagruninnum svo hann geti verið nottaður afftur
             statement.close();
@@ -77,6 +80,6 @@ public class Connect {
         } catch (SQLException e1) {
             e1.printStackTrace();
         }
-        return from;
+        return to;
     }
 }
