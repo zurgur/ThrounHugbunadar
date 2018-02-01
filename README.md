@@ -7,6 +7,9 @@ verkefni í þróunhugbúnaðar vor 2017
 gert með JavaFx jFonix í intelij 
 
 meðlimir 
-Alexander Freyr Sveinsson
-Brynja Pálína Sigurgeirsdóttir
+
+Alexander Freyr Sveinsson,
+
+Brynja Pálína Sigurgeirsdóttir,
+
 Sunna Dröfn Sigfúsdóttir
